@@ -1,0 +1,1 @@
+#Mock server to provide exchange rate data

@@ -1,43 +1,53 @@
 const ratesPerGBP = {
     EUR: {
         rate: 1.1661482,
-        name: "Euro"
+        name: "Euro",
+        symbol: "€"
     },
     USD: {
         rate:  1.2638436,
-        name: "US Dollar"
+        name: "US Dollar",
+        symbol: "$"
     },
     CAD: {
         rate:  1.7173866,
-        name: "Canadian dollar"
+        name: "Canadian dollar",
+        symbol: "$"
     },
     JPY: {
         rate:  191.63238,
-        name: "Japanese Yen"
+        name: "Japanese Yen",
+        symbol: "¥"
     },
     NZD: {
         rate:  2.1018546,
-        name: "New Zealand Dollar"
+        name: "New Zealand Dollar",
+        symbol: "$"
     },
     THB: {
         rate:  46.45587,
-        name: "Thai Bhat"
+        name: "Thai Bhat",
+        symbol: "฿"
     },
     CNY: {
         rate:  9.1417166,
-        name: "Chinese Yuan"
+        name: "Chinese Yuan",
+        symbol: "¥"
     },
-    INR: {
-        rate:  105.27494,
-        name: "Indian Rupee"
+    AUD: {
+        rate:  1.9147731,
+        name: "Australian Dollar",
+        symbol: "$"
     },
     CHF: {
         rate:  1.1399409,
-        name: "Swiss Franc"
+        name: "Swiss Franc",
+        symbol: "Fr"
     },
     ZAR: {
         rate:  23.606591,
-        name: "South African Rand"
+        name: "South African Rand",
+        symbol: "R"
     }
 }
 
@@ -52,14 +62,16 @@ const getRateForCurrency = (currency) => {
                 response = {
                     GBP: {
                         rate: parseFloat((1/gbpToCurrencyRate).toFixed(7)),
-                        name: "British Pound"
+                        name: "British Pound",
+                        symbol: "£"
                     },
                     ...response
                 }
             } else {
                 response[key] = {
                     rate: parseFloat(((1/gbpToCurrencyRate)*value.rate).toFixed(7)),
-                    name: value.name
+                    name: value.name,
+                    symbol: value.symbol
                 }
             }
         }

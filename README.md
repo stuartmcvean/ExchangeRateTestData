@@ -2,7 +2,7 @@
 
 This is a simple mock server to serve mock exchange rates
 
-Available currencies: GBP/EUR/USD/CAD/JPY/NZD/THB/CNY/INR/CHF/ZAR
+Available currencies: GBP/EUR/USD/CAD/JPY/NZD/THB/CNY/AUD/CHF/ZAR
 
 ## Requirements
 
@@ -14,7 +14,7 @@ To run the server you need to simply run 'npm install' and then 'node server.js'
 
 ## API
 
-The API is simple, just call GET http://localhost:8000/rates/{currencyCode} to retrive quotes.
+The API is simple, just call GET http://localhost:8000/rates/{currencyCode} to retrieve rates from 1 unit of selected currency to the other currencies.
 
 ### Example Request:
 
@@ -51,9 +51,9 @@ Response:
         "rate": 9.1417166,
         "name": "Chinese Yuan"
     },
-    "INR": {
-        "rate": 105.27494,
-        "name": "Indian Rupee"
+    "AUD": {
+        "rate": 1.9147731,
+        "name": "Australian Dollar"
     },
     "CHF": {
         "rate": 1.1399409,

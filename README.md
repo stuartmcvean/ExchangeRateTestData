@@ -14,9 +14,12 @@ To run the server you need to simply run 'npm install' and then 'node server.js'
 
 ## API
 
-The API is simple, just call GET http://localhost:8000/rates/{currencyCode} to retrieve rates from 1 unit of selected currency to the other currencies.
+The API is simple, just call GET http://localhost:8000/rates/{currencyCode} with the api key in the header to retrieve rates from 1 unit of selected currency to the other currencies.
 
 ### Example Request:
+
+Header:
+x-api-key: 85f7ccfd-677a-4e5a-a5eb-21c19734edf7
 
 GET http://localhost:8000/rates/gbp
 
